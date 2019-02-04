@@ -37,7 +37,7 @@ public class Recursion{
   }
   private static ArrayList<Integer> sumsHelper(int n, ArrayList<Integer> ans){
     if(n==0) return ans;
-    for(int x= ans.length();x>0;x){
+    for(int x= ans.length();x>0;x--){
       ans.add(ans.get(x)+n);
     }
     return sumsHelper(n-1,ans);
