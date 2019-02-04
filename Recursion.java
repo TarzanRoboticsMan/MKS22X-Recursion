@@ -21,9 +21,13 @@ public class recursion{
   *precondition: n is non-negative
   */
   public static int fib(int n){
-    return fibHelper(n, 0,1)
+    return fibHelper(n, 0,1);
   }
-  private static int fibHelper(int n)
+  private static int fibHelper(int n, fib0,fib1){
+    if(n==0) return fib0;
+    if(n==1) return fib1;
+    return fibHelper(n-1, fib1, fib0+fib1);
+  }
 
   /*As Per classwork*/
   public static ArrayList<Integer> makeAllSums(int n){
