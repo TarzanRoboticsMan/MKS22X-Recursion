@@ -32,10 +32,15 @@ public class Recursion{
 
   /*As Per classwork*/
   public static ArrayList<Integer> makeAllSums(int n){
-    ArrayList<Integer> ans = new ArrayList<Integer>;
+    ArrayList<Integer> ans = new ArrayList<Integer>();
     return sumsHelper(n, ans);
   }
   private static ArrayList<Integer> sumsHelper(int n, ArrayList<Integer> ans){
+    if(n==0) return ans;
+    for(int x= ans.length();x>0;x){
+      ans.add(ans.get(x)+n);
+    }
+    return sumsHelper(n-1,ans);
   }
 
 }
