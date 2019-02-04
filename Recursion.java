@@ -1,4 +1,5 @@
-public class recursion{
+import java.util.ArrayList;
+public class Recursion{
   /*You may write additional private methods */
 
   /*Recursively find the sqrt using Newton's approximation
@@ -31,6 +32,10 @@ public class recursion{
 
   /*As Per classwork*/
   public static ArrayList<Integer> makeAllSums(int n){
+    ArrayList<Integer> ans = new ArrayList<Integer>;
+    return sumsHelper(n, ans);
+  }
+  private static ArrayList<Integer> sumsHelper(int n, ArrayList<Integer> ans){
   }
 
 }
