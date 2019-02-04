@@ -11,6 +11,7 @@ public class recursion{
   }
   private double sqrtHelper(double n, double guess, double tolerance){
     if(guess**2-n/n <= tolerance) return guess;
+    return sqrtHelper(n,(guess+n/guess)/2, tolerance);
   }
 
   /*Recursively find the n'th fibbonaci number in linear time
