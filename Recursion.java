@@ -10,7 +10,7 @@ public class recursion{
     return sqrtHelper(n, n/2, tolerance);
   }
   private static double sqrtHelper(double n, double guess, double tolerance){
-    if(guess**2-n/n <= tolerance) return guess;
+    if(guess*guess-n/n <= tolerance) return guess;
     return sqrtHelper(n,(guess+n/guess)/2, tolerance);
   }
 
@@ -23,7 +23,7 @@ public class recursion{
   public static int fib(int n){
     return fibHelper(n, 0,1);
   }
-  private static int fibHelper(int n, fib0,fib1){
+  private static int fibHelper(int n, int fib0,int fib1){
     if(n==0) return fib0;
     if(n==1) return fib1;
     return fibHelper(n-1, fib1, fib0+fib1);
