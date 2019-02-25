@@ -1,4 +1,4 @@
-public class Ktest{
+public class KTest{
   public static void main(String[]args){
     for(int x=0;x<6;x++){
       testFib(x);
@@ -68,6 +68,9 @@ public class Ktest{
           System.out.println(" FAIL Some exception in test case:"+in);
         }
       }
+    }
+    public static boolean closeEnough(double ans, double correct){
+      return Math.abs(ans-correct)<0.00001;
     }
 
 }
